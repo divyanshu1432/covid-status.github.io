@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>covid live status </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="
+	sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+
+<style> 
+
+	body{background: #dcdfe3;}
+.corona { animation: corona 1s infinite }
+@keyframes corona  {
+0%{transform: rotate(0);}
+100%{ transform: rotate(360deg);  }
+
+}
+
+.stay { animation: stay 7s infinite }
+@keyframes stay  {
+0%{transform: scale(.75);}
+20%{ transform: scale(1);  }
+40%{ transform: scale(.75);  }
+60%{ transform: scale(1);  }
+80%{ transform: scale(.75);  }
+
+100%{ transform: scale(1);  }
+
+}
+
+ul li a {text-align: center;  }
+ul li:hover {background:black;}
+
+html{scroll-behavior: smooth;}
+input{background: #EAF0F1;}
+
+
+</style>
+
+</head>
+<body onload="fetch()">
+<div id="home">
+
+
+<nav style="background: #9c88ff;" class="navbar navbar-expand-lg  navbar-light">
+
+<a style="font-family: 'Anton', sans-serif; font-size: 30px;" class="navbar-brand" href="#"> COVID-19 </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navitem" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navitem">
+
+<ul class="navbar-nav ml-auto "> 
+
+<li class="nav-item active"> <a style="color: white;" href="#home" class="nav-link active"> Home </a> </li>
+<li class="nav-item ml-3"> <a style="color: white;" href="#about" class="nav-link"> About </a>  </li>
+<li class="nav-item ml-3"> <a style="color: white;" href="#symptoms" class="nav-link"> Symptoms </a> </li>
+<li class="nav-item ml-3 "> <a style="color: white;" href="#preventation" class="nav-link"> preventions </a>  </li>
+<li class="nav-item ml-3 "> <a style="color: white;" href="#form" class="nav-link"> Test </a>  </li>
+
+<li class="nav-item ml-3"> <a style="color: white;" href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" class="nav-link"> Contact </a> </li>
+
+</ul>
+</div>
+</nav>
+
+<div class="row"> 
+
+<div style="margin-left: 0px;" class="col-xl-6 col-lg-6 col-md-6 col-12 order-md-1 order-1 stay"> <img src="https://image.freepik.com/free-vector/stay-home-stay-safe-message-virus-protection_1017-24472.jpg" width="350px" height="350px"> </div> 
+
+<div style="margin-top: 5rem;  font-family:  sans-serif;" class="col-xl-6 col-lg-6 col-md-6 col-12 order-md-2 order-2 "> <h1> <em><strong> Let's stay safe and fight together Against cor<span> <img class="corona" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/220px-SARS-CoV-2_without_background.png" width="50px" height="50px"> </span> na virus </strong> </em></h1> </div> 
+
+
+</div>
+
+
+<h2 style="text-align: center; color: #e84118;" class="mt-5"> COVID-19 UPDATE </h2>
+<div class="container">
+
+	<br> <br> 
+<div style="margin-left: 100px;" class="row">
+	<div class="col-xl-4 col-lg-4 col-md-4 col-12"> <h2 id="p">  </h2> <h4 style="font-weight: lighter; "> Total Active cases </h4> </div>
+	
+<div class="col-xl-4 col-lg-3 col-md-4 col-12"> <h2 id="r">  </h2> <h4 style="font-weight: lighter;"> Total Recover </h4>  </div>
+
+<div class="col-xl-4 col-lg-3 col-md-4 col-12"> <h2 id="d">  </h2> <h4 style="font-weight: lighter;"> Total Death </h4>  </div>
+
+</div>
+
+<button  style="background: #5f27cd; color: #fff;" type="button" class="btn btn-block mt-5" value="" onclick="window.open('covid 19live.htm' , '_parent')"> <h2>  word wiide corona </h2> </button>
+
+
+<button style="background: #5f27cd; color: #fff;" type="button" class="btn btn-block mt-3" value="" onclick="window.open('india corona live status.htm' , '_parent')"> <h2>
+Corona in india live status </h2> </button>
+
+
+
+</div> 
+</div>
+<div class="container">
+
+	<div id="about">
+<div class="row mt-5">
+<div class="col-xl-4 col-lg-4 col-md-6 col-12 ">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5ZASrgLac3_zw2_o0qkkAF5s6ySWHOh92A4XWUxT0hPmVMfd3TOLk1LE_VpoHXQhznVnz84YFG55bVu5iUqD10FreEK2MawPs2A&usqp=CAU&ec=45690273"></div>
+
+<div class="col-xl-8 col-lg-4 col-md-6 col-12">
+<h2> What is Corona virus ?</h2>
+<h6> A coronavirus is a kind of common virus that causes an infection in your nose, sinuses, or upper throat. Most coronaviruses aren't dangerous. In early 2020, after a December 2019 outbreak in China, the World Health Organization identified SARS-CoV-2 as a new type of coronavirus. The outbreak quickly spread around the world. COVID-19 is a disease caused by SARS-CoV-2 that can trigger what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs) It spreads the same way other coronaviruses do, mainly through person-to-person contact. Infections range from mild to deadly. <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapseExample"> Read more </button>
+
+	<div class="collapse" id="collapse">
+<div class="card  card-body ">
+SARS-CoV-2 is one of seven types of coronavirus, including the ones that cause severe diseases like Middle East respiratory syndrome (MERS) and sudden acute respiratory syndrome (SARS). The other coronaviruses cause most of the colds that affect us during the year but aren’t a serious threat for otherwise healthy people.
+
+<h3 class="mt-3"> Is there more than one strain of SARS-CoV-2? </h3>
+<h6 style="background: #c8d6e5;"> 
+It’s normal for a virus to change, or mutate, as it infects people. A Chinese study of 103 COVID-19 cases suggests the virus that causes it has done just that. They found two strains, which they named L and S. The S type is older, but the L type was more common in early stages of the outbreak. They think one may cause more cases of the disease than the other, but they’re still working on what it all means. </h6>
+
+ </div> </div> </h6>
+</div>
+</div>
+
+<div class="row mt-5">
+<div class="col-xl-4 col-lg-4 col-md-6 col-12 ">
+<img src="https://static.langimg.com/thumb/msid-73652573,width-630,height-472,resizemode-75/pic.jpg" width="270px" height="200px">
+</div>
+
+<div class="col-xl-8 col-lg-4 col-md-6 col-12">
+
+<h3> Coronavirus Vaccine </h3>
+
+<h6> There’s no vaccine, but intense research to create one has been underway around the world since scientists shared the virus’s genetic makeup in January 2020. Vaccine testing in humans started with record speed in March 2020. More than 100 vaccine projects are in various phases of development.
+<h3 style="margin-top: 5px;"> What is the recovery rate for coronavirus?  </h3>
+
+<h5> Scientists and researchers are constantly tracking COVID-19 infections and recoveries. But they don’t have information about the outcome of every infection. Early estimates predict that the overall COVID-19 recovery rate will be between 97% and 99.75%.</h5>
+</h6></div>
+</div></div>
+
+</div>
+<div id="symptoms">
+ <h2 style="text-align: center; margin-top: 5rem; font-family: 'Monoton', cursive;"> Cornona virus symptoms</h2>
+<div class="container mt-5">
+<div class="row">
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img src="https://en.pimg.jp/062/794/809/1/62794809.jpg" width="200px" height="200px">
+ <figcaption style="margin-top: 0px; margin-left: 80px;"> cough</figcaption>  </figure>
+</div>
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlQWSFFDpONM7IyoqaZ3WSQ3JIqcq20v1IbMSSX6Q7irzAxWJt5acO92AFWiXCY4w_kJ_7vCTfyonfa1pkWwKoyTgMEyY1yA6CDQ&usqp=CAU&ec=45690273" width="180px" height="180px">
+ <figcaption style="margin-top: 0px; margin-left: 60px;"> Runny nose </figcaption>  </figure>
+</div>
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img src="https://st2.depositphotos.com/3440865/8879/v/450/depositphotos_88798832-stock-illustration-man-got-fever-high-temperature.jpg
+3" width="200px" height="200px">
+ <figcaption style="margin-top: 0px; margin-left: 70px;"> Fever </figcaption>  </figure>
+</div>
+</div>
+
+
+<div class="row mt-5">
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img src="https://st.depositphotos.com/1967477/4959/v/450/depositphotos_49594113-stock-illustration-sick-boy-lying-in-bed.jpg" width="200px" height="200px">
+ <figcaption style="margin-top: 0px; margin-left: 90px;"> cold</figcaption>  </figure>
+</div>
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img style="margin-top: 0px" src="https://thumbs.dreamstime.com/b/chronic-fatigue-syndrome-man-low-battery-80086464.jpg" width="200px" height="200px">
+ <figcaption style="margin-top: 0px; margin-left: 80px;"> Tiredness  </figcaption>  </figure>
+</div>
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+<figure> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-TPS8TlYQfH9shO49dSMOAEhOkyGaHi59NslkJ1zi62A-F3jqiM6FMbIiqiHQvd2ZlnC-MV_zUmst9R04xqNoipNDVxS3mvPJjA&usqp=CAU&ec=45690273" width="200px" height="200px">
+ <figcaption style="margin-top: 0px; margin-left: 60px;"> Difficulty in breathing </figcaption>  </figure>
+</div>
+</div></div>
+
+
+<div class="container">
+<div id="preventation">
+ <h2 style="text-align: center; margin-top: 5rem; font-family: 'Monoton', cursive;"> 6 Steps for preventation Against Corona virus  </h2>
+
+<div class="row">
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+<div class="row mt-3">
+
+
+<div class="col-xl-5 col-lg-6 col-md-12 col-12">
+<img src="https://thumbs.dreamstime.com/b/digital-illustration-cartoon-wash-your-hands-icon-cartoon-wash-your-hands-icon-177246448.jpg" width="150px" height="150px">
+
+
+</div>
+
+<div style="margin-left: -5px;" class="col-xl-7 col-lg-6 col-md-12 col-12 mt-2">
+Wash your hands regularly 20 seconds with soap and water and alcohal base hand sanatizer 
+</div> </div></div>
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+	<div class="row mt-3">
+
+
+<div class="col-xl-5 col-lg-6 col-md-12 col-12">
+<img src="https://thumbs.dreamstime.com/b/good-example-cough-etiquette-to-cover-your-mouth-nose-tissue-handkerchief-you-don-t-have-mask-flat-vector-186826753.jpg" width="150px" height="150px">
+
+
+</div>
+
+<div style="margin-left: -5px;" class="col-xl-7 col-lg-6 col-md-12 col-12 mt-2">
+Cover your mouth with tissue , fixed elbow while coughing and sneezing </div> </div></div>
+
+
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+	<div class="row mt-3">
+
+
+<div class="col-xl-5 col-lg-6 col-md-12 col-12">
+<img src="https://img.republicworld.com/republic-prod/stories/images/15844282165e7074b8bc6df.png" width="150px" height="150px">
+
+
+</div>
+
+<div style="margin-left: -5px;" class="col-xl-7 col-lg-6 col-md-12 col-12 mt-2">
+Avoid closeness with other person distance must be 1 meter(6 fit) </div> </div></div>
+
+
+<!-- deleted scene -->
+<div class="container"> 
+<div class="row">
+
+<!-- column 1--> 
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+	<div class="row mt-3">
+
+		<div class="col-xl-5 col-lg-6 col-md-12 col-12">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXAbwUgI_67tV8OMOCYbuYxLI6J5G-U40Pd2qFAh8LYPaG3Z3eNKgkh0a1xH2h5_rTLmKwoAVML9UE_sBfbBu0zmr2ZjNoc9__Aw&usqp=CAU&ec=45690273" width="150px" height="150px"></div>
+
+		<div class="col-xl-7 col-lg-6 col-md-12 col-12">
+Stay home and qurantine yourself at home if you feel unwell
+		 </div></div> </div> <!-- column 1 completed -->
+
+<!-- column 2--> 
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+	<div class="row mt-3">
+
+		<div class="col-xl-5 col-lg-6 col-md-12 col-12"> 
+
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdW6nFWeS1IH7me43bQIbZntjXleqHTX7BPlGgAUT5QbW7KlqiEu0LzTv5fDQEy6p-TazmJqaaIsSekJzNuoe3X9WmInREvvXOwQ&usqp=CAU&ec=45690273" width="150px" height="150px">
+		</div>
+		<div class="col-xl-7 col-lg-6 col-md-12 col-12">
+
+			 stay informed by news and follow the governmnt instructions.
+
+</div></div> </div> <!-- column -2 completed-->
+
+<!-- column 3--> 
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+
+	<div class="row mt-3">
+
+		<div class="col-xl-5 col-lg-6 col-md-12 col-12"> 
+
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1GbGISysSmpoScL66mMk7aNm4v8gnGV3X5ojX7r4-v_W09a_2V7KfYdPXJFhS9JtECtHSN6OM-yiLlXivQw8zy6KD_8DY38UUkw&usqp=CAU&ec=45690273" width="150px" height="150px">
+</div>
+		<div class="col-xl-7 col-lg-6 col-md-12 col-12">
+
+if you feel fever , cough ,diffficulty in breathing
+then quarantine yourself
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+<div style="" id="self-attest">
+ <h2 style="text-align: center; margin-top: 5rem; font-family: 'Monoton', cursive; background: #A4B0BD;"> Test yourself  </h2>
+
+	
+
+
+<div style="background: #000;  width: 40rem; height: 500px; position: absolute; opacity: .7;" class="form mt-5">
+	
+	<form style="transform: translate(25%,35%);" id="form"> 
+<label style="color: #fff;"> <b>  Name </b></label><span style="color: red">*</span> <input  style="margin-left: 40px;" type="text" id="name" placeholder="Name "> <br><br>
+<label style="color: #fff;"> <b>  Email </b></label><span style="color: red">*</span> <input style="margin-left: 40px;" type="text" id="Email" placeholder="name@example.com">
+<br><br>
+<label style="color: #fff;"> <b>   Mobile no  </b></label><span style="color: red">*</span> <input type="text" id="mobile" placeholder="Mobile number">
+<br><br>
+
+<label style="color: #fff;"><b> Select symptoms </b> </label>
+<br> 
+
+<input  style="margin-left: 00px;"  type="checkbox" id="cough" value="cough"><label style="color: #fff; margin-left: 5PX;" > cough </label> 
+<input  style="margin-left: 10px;"  type="checkbox" id="cough" value="Fever"><label style="color: #fff;  margin-left: 5PX;">Fever </label> 
+<input  style="margin-left: 20px;"  type="checkbox" id="cough" value="Difficulty in breathing"> <label style="color: #fff;"> Difficulty in breathing </label>
+<input  style="margin-left: 20px;"  type="checkbox" id="cough" value="Tiredness"> <label style="color: #fff;"> Tiredness </label>
+<br><br>
+<button class="btn btn-success btn-sm"> submit </button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<script> 
+
+
+	function fetch() { $.get("https://api.covid19api.com/summary" , 
+
+  function (data) {
+
+
+
+var z = document.getElementById('tebel')
+
+for(var i =1;  i<(data['Countries'].length); i++){
+
+ document.getElementById('p').innerHTML = (data['Global']['TotalConfirmed']);
+ document.getElementById('r').innerHTML = (data['Global']['TotalRecovered']);
+ document.getElementById('d').innerHTML = (data['Global']['TotalDeaths']);
+
+
+}})}
+</script>
+
+</body>
+</html>

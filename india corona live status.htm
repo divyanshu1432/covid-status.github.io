@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Corona Updates </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body onload="fetch()">
+
+
+<h2 style="color: red; text-align: center;">  COVID-19 LIVE UPDATE OF INDIA</h2>
+
+
+<table class="table table-bordered table-striped text-center " id="tabel">
+	
+
+
+<tr>
+	
+<th> last update time </th>
+ <th> state </th>
+
+<th>  Recovered</th>
+
+<th> confirmed </th>
+<th> active</th>
+<th>deaths </th>
+
+
+
+
+
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+<script >
+	
+
+function fetch() {
+  $.get('https://api.covid19india.org/data.json', 
+
+
+function (data) {
+
+
+var x = document.getElementById('tabel')
+
+for( var i=1; i<(data['statewise'].length); i++){
+var y = x.insertRow();
+y.insertCell(0);
+
+
+x.rows[i].cells[0].innerHTML = data['statewise'][i-1]['lastupdatedtime'];
+
+
+x.rows[i].cells[0].style.background = '#7a4a91';
+x.rows[i].cells[0].style.color = '#fff';
+
+
+
+
+y.insertCell(1);
+
+
+x.rows[i].cells[1].innerHTML = data['statewise'][i-1]['state'];
+
+
+x.rows[i].cells[1].style.background = '#4bb7d8';
+x.rows[i].cells[1].style.color = '#000';
+
+
+
+
+y.insertCell(2);
+
+
+x.rows[i].cells[2].innerHTML = data['statewise'][i-1]['recovered'];
+
+
+x.rows[i].cells[2].style.background = '#f36e23';
+x.rows[i].cells[2].style.color = '#000';
+
+
+
+y.insertCell(3);
+
+
+x.rows[i].cells[3].innerHTML = data['statewise'][i-1]['confirmed'];
+
+
+x.rows[i].cells[3].style.background = '#870c1b';
+x.rows[i].cells[3].style.color = '#fff';
+
+
+
+
+y.insertCell(4);
+
+
+x.rows[i].cells[4].innerHTML = data['statewise'][i-1]['active'];
+
+
+x.rows[i].cells[4].style.background = '#9cc850';
+x.rows[i].cells[4].style.color = '#000';
+
+
+
+
+
+
+y.insertCell(5);
+
+
+x.rows[i].cells[5].innerHTML = data['statewise'][i-1]['deaths'];
+
+
+x.rows[i].cells[5].style.background = '#870c1b';
+x.rows[i].cells[5].style.color = '#fff';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+}
+
+  	)
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+
+</html>

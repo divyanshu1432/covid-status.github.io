@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title> Corona Updates </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<style> 
+
+
+body{ background: #; }  th{color:#000;} .thead-dark{opacity: 1!important;} </style>
+</head>
+<body onload="fetch()" >
+
+
+	
+
+</script>
+	<div class=" container mt-5">
+<div class="table-responsive">
+<table class="table table-bordered table-striped text-center">
+<thead class="thead-dark"> 	<tr>
+<th>	
+<h4> Total confirm :  <span style="color:#f54538" id="p" onload="fetchh()">
+ </span>
+</h4></th>
+
+<th>
+	
+<h4> New confirm :  <span style="color:#f54538;" id="n" onload="fetchh()">
+ </span>
+</h4>
+</th></tr></thead>
+</table>
+		
+
+<table class="table table-bordered table-striped text-center">
+<thead class="thead-dark"> 	<tr>
+<th >	
+<h4> Total recovered :  <span style="color:#f54538;" id="r" onload="fetchh()">
+ </span>
+</h4></th>
+
+<th>
+	
+<h4> New recovered :  <span style="color:#f54538;" id="nr" onload="fetchh()">
+ </span>
+</h4>
+</th></tr></thead>
+</table>
+
+</div>
+
+<table class="table table-bordered table-striped text-center">
+<thead class="thead-dark"> 	<tr>
+<th>	
+<h4> Total Deaths :  <span style="color:#f54538;" id="d" onload="fetchh()">
+ </span>
+</h4></th>
+
+<th>
+	
+<h4> New Deaths :  <span style="color:#f54538;" id="nd" onload="fetchh()">
+ </span>
+</h4>
+</th></tr></thead>
+</table></div>
+
+
+
+<h2 style="color: red; text-align: center;" class="mt-5"> COVID-19 LIVE COUNTRY UPDATE </h2>
+	<div class="container mt-5">
+
+
+
+
+<div class="table-responsive"  >
+
+
+<table class="table table-bordered table-striped text-center " id="tebel" >
+	
+<thead class="thead-light">
+
+<tr>
+	
+<th> COUNTRY </th>
+<th> NEW CONFIRMED </th>
+<th> Total Confirmed</th>
+<th> New Deaths </th>
+<th> Total Deaths </th>
+<th> New Recovered</th>
+
+<th> TotalRecovered </th>
+
+
+
+
+</tr></thead>
+
+
+</table>
+
+</div> 
+</div>
+<br> <br> <br> <br> <br> 
+
+
+
+
+</div>
+
+
+<script>
+	
+	function fetch() { $.get("https://api.covid19api.com/summary" , 
+
+  function (data) {
+
+
+
+var z = document.getElementById('tebel')
+
+for(var i =1;  i<(data['Countries'].length); i++){
+
+
+var x = z.insertRow();
+x.insertCell(0);
+
+z.rows[i].cells[0].innerHTML = data['Countries'][i-1]['Country'];
+
+
+z.rows[i].cells[0].style.background = '#7a4a91';
+z.rows[i].cells[0].style.color = '#fff';
+
+ x.insertCell(1);
+z.rows[i].cells[1].innerHTML = data['Countries'][i-1]['NewConfirmed'];
+
+
+z.rows[i].cells[1].style.background = '#4bb7d8';
+z.rows[i].cells[1].style.color = '#000';
+
+
+
+x.insertCell(2);
+z.rows[i].cells[2].innerHTML = data['Countries'][i-1]['TotalConfirmed'];
+
+
+z.rows[i].cells[2].style.background = '#f36e23';
+z.rows[i].cells[2].style.color = '#000';
+
+
+
+
+x.insertCell(3);
+z.rows[i].cells[3].innerHTML = data['Countries'][i-1]['NewDeaths'];
+
+
+z.rows[i].cells[3].style.background = '#870c1b';
+z.rows[i].cells[3].style.color = '#fff';
+
+
+
+
+x.insertCell(4);
+z.rows[i].cells[4].innerHTML = data['Countries'][i-1]['TotalDeaths'];
+
+
+z.rows[i].cells[4].style.background = '#9cc850';
+z.rows[i].cells[4].style.color = '#000';
+
+
+
+
+x.insertCell(5);
+z.rows[i].cells[5].innerHTML = data['Countries'][i-1]['NewRecovered'];
+
+
+z.rows[i].cells[5].style.background = '#4bb7d8';
+z.rows[i].cells[5].style.color = '#000';
+
+
+
+x.insertCell(6);
+z.rows[i].cells[6].innerHTML = data['Countries'][i-1]['TotalRecovered'];
+
+
+z.rows[i].cells[6].style.background = '#870c1b';
+z.rows[i].cells[6].style.color = '#fff';
+
+ document.getElementById('p').innerHTML = (data['Global']['TotalConfirmed']);
+ document.getElementById('n').innerHTML = (data['Global']['NewConfirmed']);
+ document.getElementById('r').innerHTML = (data['Global']['TotalRecovered']);
+ document.getElementById('nr').innerHTML = (data['Global']['NewRecovered']);
+ document.getElementById('d').innerHTML = (data['Global']['TotalDeaths']);
+ document.getElementById('nd').innerHTML = (data['Global']['NewDeaths']);
+
+}})
+
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
